@@ -1,0 +1,370 @@
+/* ========================================
+   DISCOVER CAIRO
+   Ancient Egyptian Theme
+   ======================================== */
+
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #F8F4E9;
+    color: #3B2F2F;
+    line-height: 1.7;
+}
+
+/* Navigation */
+
+header {
+    background-color: #3B2F2F;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #C9A45C;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #C9A45C;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #F8F4E9;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #C9A45C;
+}
+
+.nav-links a:focus-visible,
+.btn:focus-visible {
+    outline: 3px solid #C9A45C;
+    outline-offset: 4px;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 85vh;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    color: #F4D58D;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #F8F4E9;
+    margin-bottom: 35px;
+}
+
+/* Explore Button */
+
+.btn {
+    display: inline-block;
+    background-color: #C9A45C;
+    color: #211A16;
+
+    padding: 14px 35px;
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #F4D58D;
+    transform: translateY(-3px);
+}
+
+/* General Sections */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 30px;
+    scroll-margin-top: 90px;
+}
+
+.section h2 {
+    font-size: 38px;
+    text-align: center;
+    color: #8B6914;
+
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+
+    width: 80px;
+    height: 4px;
+
+    background-color: #C9A45C;
+
+    margin: 15px auto 0;
+}
+
+.section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Ancient Egypt Section */
+
+.history {
+    background-color: #E8D8B8;
+    max-width: 100%;
+    padding-left: max(30px, calc((100% - 1140px) / 2));
+    padding-right: max(30px, calc((100% - 1140px) / 2));
+}
+
+.history h2 {
+    color: #3B2F2F;
+}
+
+/* Landmark Cards */
+
+.landmark-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.landmark-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.landmark-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.landmark-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.landmark-card h3 {
+    font-size: 24px;
+    color: #8B6914;
+    padding: 20px 20px 10px;
+}
+
+.landmark-card p {
+    font-size: 16px;
+    padding: 0 20px 25px;
+}
+
+/* Personal Experience */
+
+.experience {
+    background-color: #E8D8B8;
+    max-width: 100%;
+
+    padding-left: max(30px, calc((100% - 1000px) / 2));
+    padding-right: max(30px, calc((100% - 1000px) / 2));
+}
+
+.experience h2 {
+    color: #3B2F2F;
+}
+
+/* Footer */
+
+footer {
+    background-color: #3B2F2F;
+    color: #F8F4E9;
+
+    text-align: center;
+    padding: 50px 20px;
+
+    border-top: 4px solid #C9A45C;
+}
+
+footer h3 {
+    color: #C9A45C;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* Tablet Responsive Design */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .landmark-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .section {
+        scroll-margin-top: 150px;
+    }
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 60px 20px;
+        scroll-margin-top: 180px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .section p {
+        font-size: 16px;
+    }
+
+    .landmark-container {
+        grid-template-columns: 1fr;
+    }
+
+    .history,
+    .experience {
+        padding: 60px 20px;
+    }
+}
+
+/* Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .btn,
+    .landmark-card,
+    .nav-links a {
+        transition: none;
+    }
+}
